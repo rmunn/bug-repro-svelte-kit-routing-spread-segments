@@ -1,17 +1,26 @@
 <script>
-	import Counter from '$lib/Counter.svelte';
+	import Links from '$lib/Links.svelte'
+
+	let urls = [
+		['/foo/one/two', true],
+		['/food/one/two', false],
+		['/one-bar/two/three', true],
+		['/one-bard/two/three', false],
+	]
 </script>
 
 <svelte:head>
-	<title>Hello world!</title>
+	<title>Bug repro</title>
 </svelte:head>
 
 <main>
-	<h1>Hello world!</h1>
+	<h1>Bug repro</h1>
 
-	<Counter />
-
-	<p>Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte apps.</p>
+	<p>
+		Links to demonstrate bug:<br/>
+		
+		<Links {urls} />
+	</p>
 </main>
 
 <style>
