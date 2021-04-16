@@ -2,6 +2,14 @@
 
 Reproducing a routing bug in svelte-kit.
 
+## To reproduce:
+
+- Run `pnpm i`
+- Run `pnpm run dev`
+- Browse to http://localhost:3000/ and follow the links.
+
+The links marked with ✔️ are producing the right results, but the ones marked with ❌ are producing incorrect results in the `rest` parameter.
+
 Original README from the Svelte template follows:
 
 # create-svelte
